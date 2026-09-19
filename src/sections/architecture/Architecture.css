@@ -1,0 +1,62 @@
+.arch-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.arch-card {
+  border: 1px solid var(--portfolio-border);
+  background: #ffffff;
+  overflow: hidden;
+  transition: box-shadow 0.15s;
+}
+
+.arch-card:hover {
+  box-shadow: 0 2px 12px rgba(15, 98, 254, 0.08);
+  border-color: #a6c8ff;
+}
+
+.arch-diagram-wrapper {
+  background: #f4f4f4;
+  border-bottom: 1px solid var(--portfolio-border);
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arch-diagram {
+  width: 100%;
+  height: 140px;
+}
+
+.arch-card-body {
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.arch-card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--portfolio-text);
+  margin: 0;
+}
+
+.arch-card-desc {
+  font-size: 0.85rem;
+  color: var(--portfolio-muted);
+  line-height: 1.65;
+  margin: 0;
+}
+
+.arch-card-project {
+  font-size: 0.75rem;
+  color: var(--portfolio-accent);
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .arch-grid { grid-template-columns: 1fr; }
+}

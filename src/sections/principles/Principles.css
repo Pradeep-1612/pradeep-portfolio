@@ -1,0 +1,64 @@
+.principles-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 1px solid #393939;
+}
+
+.principle-item {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid #393939;
+  transition: background 0.15s;
+}
+
+.principle-item:last-child {
+  border-bottom: none;
+}
+
+.principle-item:hover {
+  background: #1c1c1c;
+}
+
+.principle-number {
+  font-size: 0.75rem;
+  font-weight: 700;
+  font-family: 'IBM Plex Mono', monospace;
+  color: #78a9ff;
+  padding: 1.5rem 1.25rem 1.5rem 1.5rem;
+  flex-shrink: 0;
+  width: 60px;
+  display: flex;
+  align-items: flex-start;
+  padding-top: 1.75rem;
+}
+
+.principle-content {
+  flex: 1;
+  padding: 1.5rem 2rem 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-left: 1px solid #393939;
+}
+
+.principle-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #f4f4f4;
+  margin: 0;
+  font-style: italic;
+}
+
+.principle-body {
+  font-size: 0.875rem;
+  color: #a8a8a8;
+  line-height: 1.7;
+  margin: 0;
+}
+
+@media (max-width: 672px) {
+  .principle-item { flex-direction: column; }
+  .principle-number { padding: 1.25rem 1.25rem 0; width: auto; }
+  .principle-content { padding: 0.5rem 1.25rem 1.25rem; border-left: none; }
+}
