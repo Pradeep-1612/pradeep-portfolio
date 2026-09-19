@@ -40,7 +40,8 @@ export default function Hero() {
               "Object-Oriented Design",
               "Data Structures & Algorithms",
               "Docker · Kubernetes",
-              "CI/CD"
+              "CI/CD",
+              "AI enthusiast"
             ].map((t) => (
               <span key={t} className="hero-tech-tag">{t}</span>
             ))}
