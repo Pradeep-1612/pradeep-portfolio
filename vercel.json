@@ -1,5 +1,5 @@
 {
-  "rewrites": [{ "source": "/PradeepPortfolio/(.*)", "destination": "/PradeepPortfolio/index.html" }],
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }],
   "headers": [
     {
       "source": "/(.*)",
