@@ -73,8 +73,8 @@ export default function Hero() {
               GitHub
             </a>
             <a
-              href="/Resume.pdf"
-              download="Pradeep_Reddy_Juturu_LeadDev_Resume.pdf"
+              href="/Pradeep_ReddyJ_LeadDev_Resume.pdf"
+              download="Pradeep_ReddyJ_LeadDev_Resume.pdf"
               className="hero-btn hero-btn--ghost"
             >
               <Download size={16} aria-hidden="true" />
