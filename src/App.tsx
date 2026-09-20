@@ -2,7 +2,6 @@ import "./index.css";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import Hero from "./sections/hero/Hero";
-import Capabilities from "./sections/capabilities/Capabilities";
 import Skills from "./sections/skills/Skills";
 import Metrics from "./sections/metrics/Metrics";
 import Work from "./sections/work/Work";
@@ -14,7 +13,6 @@ import { useActiveSection } from "./hooks/useActiveSection";
 
 const SECTION_IDS = [
   "hero",
-  "capabilities",
   "skills",
   "metrics",
   "work",
@@ -32,7 +30,6 @@ function App() {
       <Nav activeSection={activeSection} />
       <main className="portfolio-main">
         <Hero />
-        <Capabilities />
         <Skills />
         <Metrics />
         <Work />

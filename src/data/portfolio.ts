@@ -1,5 +1,4 @@
 export const NAV_LINKS = [
-  { label: "What I Do", href: "#capabilities" },
   { label: "Skills", href: "#skills" },
   { label: "Impact", href: "#metrics" },
   { label: "Work", href: "#work" },
@@ -9,49 +8,97 @@ export const NAV_LINKS = [
   { label: "Awards", href: "#awards" },
 ];
 
-export const CAPABILITIES = [
+export const SKILL_GROUPS = [
+  {
+    id: "ai",
+    title: "AI Engineering",
+    description:
+      "Knowledge of GenAI and LLM application development, prompt engineering, RAG pipelines, AI agents, and conversational AI workflows. Hands-on experience with IBM watsonx Orchestrate and IBM Bob for enterprise AI automation and orchestration.",
+    items: [
+      "GenAI & LLM Concepts", "Prompt Engineering", "Few-Shot Prompting", "RAG Concepts",
+      "AI Agents & Tool Use", "LLM Evaluation Concepts", "Guardrails", "Conversational AI",
+      "AI Workflow Orchestration", "IBM watsonx Orchestrate", "IBM Bob",
+    ],
+  },
   {
     id: "backend",
     title: "Backend Engineering",
     description:
       "Java, Spring Boot, Python, REST APIs, microservices, and service-oriented architecture. Designing reliable, scalable server-side systems with clear API contracts and resilient service boundaries.",
-    tags: ["Java", "Spring Boot", "Python", "REST APIs", "Microservices", "SOA"],
+    items: [
+      "Java", "Spring Boot", "Python Flask", "Python Django",
+      "REST APIs", "Microservices", "Express.js", "API Design", "Service-Oriented Architecture",
+    ],
   },
   {
     id: "frontend",
     title: "Frontend Engineering",
     description:
       "Angular, React, TypeScript, reusable component architecture, and design systems. Building responsive, accessible, performant web applications with maintainable UI layers.",
-    tags: ["React", "Angular", "TypeScript", "Design Systems", "Accessibility"],
+    items: [
+      "Angular", "ReactJS", "HTML5", "CSS3", "TypeScript",
+      "Component-Based Architecture", "Design Systems", "Responsive UI Development",
+    ],
   },
   {
     id: "architecture",
-    title: "System & Application Architecture",
+    title: "Software Architecture & Engineering Practices",
     description:
       "Scalable application design, API architecture, reusable frameworks, design patterns, and feature-flag infrastructure. Owning technical decisions from initial design through delivery.",
-    tags: ["API Design", "Feature Flags", "Design Patterns", "Reusable Frameworks"],
+    items: [
+      "Object-Oriented Design", "Data Structures & Algorithms", "Design Patterns",
+      "System Design", "Reusable Component Architecture", "Feature Flag Architecture",
+      "Performance Optimization", "Scalable Application Design",
+    ],
   },
   {
     id: "performance",
     title: "Performance Engineering",
     description:
       "Frontend optimization, lazy loading, on-demand module loading, client-side caching, query optimization, and API retrieval improvements that produce measurable outcomes.",
-    tags: ["Lazy Loading", "Caching", "Query Optimization", "Bundle Splitting"],
+    items: [
+      "Lazy Loading", "On-Demand Module Loading", "Client-Side Caching",
+      "Bundle Splitting", "Query Optimization", "API Performance Tuning",
+    ],
   },
   {
-    id: "platforms",
-    title: "Developer Platforms & Enterprise Tools",
+    id: "databases",
+    title: "Databases & Data Management",
     description:
-      "Internal platforms that simplify complex technical workflows and improve developer productivity. Replacing manual, error-prone processes with self-service, automated tooling.",
-    tags: ["Self-Service", "Developer Experience", "Automation", "Internal Tooling"],
+      "Relational and NoSQL database design, SQL optimization, and query performance tuning across MySQL, PostgreSQL, Couchbase, and DataStax.",
+    items: [
+      "MySQL", "PostgreSQL", "Couchbase", "DataStax",
+      "SQL Optimization", "Database Design", "Query Performance Tuning",
+    ],
+  },
+  {
+    id: "testing",
+    title: "Testing & Quality Engineering",
+    description:
+      "Unit, integration, and end-to-end testing across Java and JavaScript ecosystems. Enforcing code quality through linting, static analysis, and automated test pipelines.",
+    items: [
+      "JUnit", "Jasmine", "Jest", "Cypress", "PyTest",
+      "ESLint", "Pylint", "Unit Testing", "Integration Testing", "End-to-End Testing",
+    ],
   },
   {
     id: "devops",
-    title: "DevOps & Engineering Excellence",
+    title: "DevOps & Cloud Engineering",
     description:
       "Docker, Kubernetes, Jenkins, Azure DevOps, CI/CD pipelines, automated testing, and release engineering. Ensuring code reaches production reliably and safely.",
-    tags: ["Docker", "Kubernetes", "Jenkins", "Azure DevOps", "CI/CD"],
+    items: [
+      "Git", "Jenkins", "Docker", "Kubernetes",
+      "Azure DevOps", "CI/CD Pipelines", "Release Automation", "Agile Development",
+    ],
   },
+  {
+    id: "languages",
+    title: "Programming Languages",
+    description:
+      "Primary languages used across backend services, frontend applications, scripting, data engineering, and systems work.",
+    items: ["Java", "Python", "JavaScript", "TypeScript", "SQL", "C"],
+  },
+
 ];
 
 export const METRICS = [
@@ -70,6 +117,44 @@ export const METRICS = [
 ];
 
 export const PROJECTS = [
+  {
+    id: "certificates",
+    title: "AI-Enabled Certificate Management Workflow Orchestration",
+    subtitle: "Enterprise Security, Automation & Conversational AI Platform",
+    company: "IBM",
+    impact: "$700K annual savings · 1,000+ enterprise partners · AI-enabled workflow orchestration",
+    summary: "Led design and development of a secure, invite-only certificate management platform serving 1,000+ enterprise trading partners. Automated SSL/TLS certificate lifecycle management from partner onboarding and submission through validation and deployment, while integrating IBM watsonx Orchestrate to enable conversational discovery and secure certificate renewal workflows.",
+    problem: "Certificate management for 1,000+ trading partners relied heavily on manual operational processes for certificate submission, renewal, validation, and tracking. This created operational bottlenecks, increased support effort, and limited partner self-service.",
+    solution: "Designed an invite-only, role-gated partner portal with automated certificate lifecycle workflows and integrated IBM watsonx Orchestrate as a conversational AI layer. Users can discover expiring certificates and impacted connections through conversational requests and transition securely to authorized certificate-management and renewal workflows.",
+    architecture: [
+      "Java Spring Boot REST API backend with role-based access control",
+      "Angular SPA with invite-token registration and self-service workflows",
+      "IBM watsonx Orchestrate integration for conversational AI and workflow orchestration",
+      "Conversational discovery of expiring certificates and impacted connections",
+      "Automated certificate expiry tracking, validation, and notification workflows",
+      "Integration with IBM Sterling B2B Integrator infrastructure",
+      "SQL database for partner, certificate, and audit data",
+      "Jenkins CI/CD pipeline with automated integration tests"
+    ],
+    outcomes: [
+      "$700K annual reduction in operational costs",
+      "1,000+ enterprise trading partners onboarded",
+      "Reduced manual certificate-management effort through automation and self-service",
+      "Conversational access to certificate discovery and renewal workflows",
+      "Secure, role-based transition from AI-driven requests to authorized workflows"
+    ],
+    tech: [
+      "Java",
+      "Spring Boot",
+      "Angular",
+      "SQL",
+      "IBM watsonx Orchestrate",
+      "Conversational AI",
+      "Jenkins",
+      "IBM Sterling B2B"
+    ],
+    github: null,
+  },
   {
     id: "datastax",
     title: "Unified DataStax Dashboard",
@@ -99,36 +184,6 @@ export const PROJECTS = [
     ],
     tech: ["React", "TypeScript", "Express.js", "Redux Toolkit", "Carbon Design System", "DataStax APIs", "Monaco Editor"],
     github: "https://github.com/Pradeep-1612",
-  },
-  {
-    id: "certificates",
-    title: "Partner Certificate Management Platform",
-    subtitle: "Enterprise Security & Automation Platform",
-    company: "IBM",
-    impact: "$700K annual savings · 1,000+ enterprise partners · Automated certificate lifecycle",
-    summary:
-      "Led design and development of a secure, invite-only platform serving 1,000+ enterprise trading partners. Automated SSL/TLS certificate lifecycle management — from partner onboarding and self-service certificate submission, through automated validation, to operational deployment — reducing IBM's manual operational burden by approximately $700K annually.",
-    problem:
-      "Certificate management for 1,000+ trading partners was entirely manual. IBM operations teams handled every certificate renewal, submission, and validation individually. This created a bottleneck, significant operational cost, and a poor partner experience.",
-    solution:
-      "Designed an invite-only, role-gated partner portal with automated certificate lifecycle workflows. Partners receive secure invite tokens, self-register, and can submit, renew, and track certificates independently. Backend automation validates certificates, notifies stakeholders at expiry thresholds, and integrates with IBM Sterling B2B infrastructure.",
-    architecture: [
-      "Java Spring Boot REST API backend with role-based access control",
-      "Angular SPA with invite-token registration flow",
-      "Automated certificate expiry tracking and notification workflows",
-      "Secure invite-only onboarding — no public self-registration",
-      "Integration with IBM Sterling B2B Integrator infrastructure",
-      "SQL database for partner, certificate, and audit data",
-      "Jenkins CI/CD pipeline with automated integration tests",
-    ],
-    outcomes: [
-      "$700K annual reduction in operational costs",
-      "1,000+ enterprise trading partners onboarded",
-      "Eliminated manual certificate handling for operations teams",
-      "Partners able to self-manage certificate lifecycle independently",
-    ],
-    tech: ["Java", "Spring Boot", "Angular", "SQL", "Jenkins", "IBM Sterling B2B"],
-    github: null,
   },
   {
     id: "b2b-config",
@@ -252,14 +307,14 @@ export const EXPERIENCE = [
     period: "2022 – Present",
     location: "India · Clients: North America, Europe, Germany",
     summary:
-      "Full-stack engineering and technical ownership across multiple IBM enterprise products. Designed reusable architectures, led performance initiatives, built automation platforms, and produced measurable business outcomes.",
+      "Full-stack engineering and technical ownership across multiple IBM enterprise products, with experience in AI-enabled workflow orchestration, reusable architectures, automation platforms, and performance engineering. Designed and delivered scalable solutions with measurable business outcomes.",
     highlights: [
-      "Designed and delivered Partner Certificate Management Platform serving 1,000+ enterprise partners — $700K annual savings",
+      "Designed and delivered an AI-enabled Partner Certificate Management Platform serving 1,000+ enterprise partners, integrating IBM watsonx Orchestrate for conversational certificate discovery and secure renewal workflows — driving ~$700K in annual savings.",
       "Built IBM Sterling B2B Integration SaaS Configuration Hub for 1,500+ enterprise companies — 60% reduction in support load",
       "Led frontend performance engineering initiative — 75% page load reduction, 81% duplicate code elimination",
       "Designed reusable Feature Flag Framework — 95% reduction in per-flag implementation effort",
       "Engineered dual design system migration (Neutrino → Carbon) with zero feature delivery interruption",
-      "Full-stack development across Java Spring Boot, Angular, REST APIs, SQL, Docker, Kubernetes, CI/CD",
+      "Full-stack development across Java Spring Boot, Angular, REST APIs, SQL, Docker, Kubernetes, and CI/CD"
     ],
     awards: ["IBM Outstanding Technical Achievement Award — 2023"],
   },
@@ -357,64 +412,13 @@ export const PRINCIPLES = [
   },
 ];
 
-export const ARTICLES = [
-  {
-    id: "reusable-frontend-architecture",
-    title: "Designing Reusable Frontend Architecture for Enterprise Applications",
-    summary:
-      "How to structure Angular/React applications so that component logic, services, and state are reused rather than duplicated — with patterns drawn from reducing duplicate code by 81% in a real enterprise platform.",
-    tags: ["Architecture", "Angular", "React", "Design Patterns"],
-    readTime: "12 min",
-  },
-  {
-    id: "lazy-loading-caching",
-    title: "Reducing Web Application Load Time Through Lazy Loading and Client-Side Caching",
-    summary:
-      "A practical engineering walkthrough of diagnosing load performance problems, applying route-level lazy loading, and implementing HTTP interceptor caching — with measured before/after outcomes.",
-    tags: ["Performance", "Angular", "Optimization", "Caching"],
-    readTime: "10 min",
-  },
-  {
-    id: "developer-productivity-platforms",
-    title: "Building Developer Productivity Platforms for Complex APIs",
-    summary:
-      "Lessons from building the DataStax Dashboard: when to build an internal tool, how to design a BFF layer, state management decisions, and what makes a developer platform genuinely useful versus just another wrapper.",
-    tags: ["Developer Experience", "Platform Engineering", "Architecture"],
-    readTime: "14 min",
-  },
-  {
-    id: "feature-flag-frameworks",
-    title: "Designing Feature Flag Frameworks for Enterprise Applications",
-    summary:
-      "Why ad-hoc feature flags create long-term technical debt, how to design a centralized configuration model, and the structural directive pattern that reduces per-flag implementation effort by 95%.",
-    tags: ["Feature Flags", "Angular", "Architecture", "Release Engineering"],
-    readTime: "9 min",
-  },
-  {
-    id: "design-system-migration",
-    title: "Incremental Migration Between Design Systems",
-    summary:
-      "How to migrate a large enterprise application from one design system to another without halting feature delivery — the abstraction layer approach, component adapter patterns, and migration sequencing strategy.",
-    tags: ["Design Systems", "Migration", "Architecture", "Angular"],
-    readTime: "11 min",
-  },
-  {
-    id: "self-service-configuration",
-    title: "Building Self-Service Configuration Platforms for Enterprise Software",
-    summary:
-      "From 1,500+ support tickets to self-service: designing validation pipelines, role-gated access, audit trails, and UI patterns that let enterprise customers manage complex configuration safely without expert help.",
-    tags: ["Enterprise", "Self-Service", "Spring Boot", "Angular"],
-    readTime: "13 min",
-  },
-];
-
 export const AWARDS = [
   {
     title: "IBM Outstanding Technical Achievement Award",
     year: "2023",
     org: "IBM",
     context:
-      "Recognised for engineering impact across the IBM Sterling B2B Integration platform — architectural contributions, performance improvements, and delivery of the Partner Certificate Management Platform.",
+      "Recognised for engineering impact across the IBM Sterling B2B Integration platform — architectural contributions, performance improvements, and AI-Enabled Certificate Management Workflow Orchestration ",
   },
   {
     title: "TCS Star Team Award",

@@ -24,12 +24,13 @@ export default function Hero() {
           </div>
 
           <p className="hero-statement">
-            I architect and build scalable enterprise systems, developer platforms, APIs, and high-performance applications.
+            I architect and build scalable enterprise systems, developer platforms, APIs, and high-performance applications, with growing expertise in AI-enabled workflow orchestration.
             I lead engineering initiatives across system architecture, backend and frontend development, data and API design, CI/CD, and production optimization—turning complex technical challenges into reliable, maintainable solutions that deliver measurable business and engineering impact.
           </p>
 
           <div className="hero-tech-row">
             {[
+              "AI Engineering",
               "Java · Spring Boot",
               "React · Angular",
               "TypeScript",
@@ -40,8 +41,7 @@ export default function Hero() {
               "Object-Oriented Design",
               "Data Structures & Algorithms",
               "Docker · Kubernetes",
-              "CI/CD",
-              "AI enthusiast"
+              "CI/CD"
             ].map((t) => (
               <span key={t} className="hero-tech-tag">{t}</span>
             ))}

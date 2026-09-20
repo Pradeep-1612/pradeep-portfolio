@@ -13,6 +13,7 @@
   transition: background 0.2s, box-shadow 0.2s, transform 0.2s, z-index 0s;
   position: relative;
   z-index: 0;
+  border: 1px solid #f4f4f494;
 }
 
 .skills-card:hover {
@@ -39,6 +40,14 @@
   color: var(--portfolio-text);
   margin: 0;
   line-height: 1.35;
+}
+
+.skills-description {
+  font-size: 0.825rem;
+  color: var(--portfolio-muted);
+  line-height: 1.65;
+  margin: 0;
+  flex: 1;
 }
 
 .skills-tags {
